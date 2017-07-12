@@ -10,20 +10,16 @@
 
 		router.get("/", async(ctx, next) => {
 			const url = await auth.getAuthorizeURL('redirect_url','snsapi_userinfo','');
-			console.log(url);
-			//ctx.redirect(url);
+			ctx.redirect(url);
 		})
 
 		router.get("/getcode", async(ctx, next) => {
 			const token = await auth.getAccessToken(ctx.request.query.code);
-			console.log(token);
 			const accessToken = token.data.access_token;
 			const openid = token.data.openid;
 			const userinfo = await auth.getUser(openid);
-			console.log(userinfo)
 			
 		})
-
 
 		app.use(router.routes());
 		app.listen(3000);
