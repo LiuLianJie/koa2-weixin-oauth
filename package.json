@@ -1,6 +1,6 @@
 {
   "name": "koa2-weixin-auth",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -8,6 +8,10 @@
   },
   "author": "",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LiuLianJie/koa2-weixin-oauth"
+  },
   "dependencies": {
     "request": "^2.81.0"
   }
